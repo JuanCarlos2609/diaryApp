@@ -87,16 +87,17 @@ const Form = ({ show, setShow, setContact, dataEdit = null }) => {
           </IconButton>
         </Grid>
         <Typography className={classes.titleDrawer}>
-          {dataEdit ? "EDITAR CONTACTO" : "AGREGA UN NUEVO CONTACTO"}
+          {dataEdit ? "EDITAR CONTACTO" : "CREAR CONTACTO"}
         </Typography>
+        <Typography className={classes.subtitleDrawer}>Ingrese los datos personales:</Typography>
         <Grid container direction="column" spacing={2}>
           <Grid item>
             <TextField
               fullWidth
               id="name"
               type="text"
-              label="Nombre"
-              placeholder="Nombre"
+              label="Nombre Completo"
+              placeholder="Ingrese el nombre completo"
               variant="outlined"
               value={formik.values.name}
               onChange={formik.handleChange}
@@ -133,7 +134,8 @@ const Form = ({ show, setShow, setContact, dataEdit = null }) => {
               helperText={formik.touched.tlf && formik.errors.tlf}
             />
           </Grid>
-          <Grid item>
+          <Grid item style={{marginTop: 10}}>
+            <Typography className={classes.subtitleDrawer}>Fecha de nacimiento:</Typography>
             <TextField
               fullWidth
               id="birthdate"

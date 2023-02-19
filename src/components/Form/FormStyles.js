@@ -25,6 +25,14 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "1px",
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
+    color: theme.palette.primary.main
+  },
+  subtitleDrawer: {
+    fontSize: '16px',
+    letterSpacing: '1px',
+    marginBottom: theme.spacing(2),
+    fontWeight: 600
+
   },
   contentButton: {
     marginTop: 30,
